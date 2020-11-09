@@ -1,3 +1,4 @@
+1. Какое слово (Вводится текст в две строки и число N. Определить, есть ли в тексте N-ое слово)
 s1_list = input().split()
 s2_list = input().split()
 N = int(input())
@@ -13,7 +14,7 @@ else:
     else:
         print(s1_list[N-1])
         
-        
+2. Буквы и цифры (Требуется посчитать и вывести, сколько в нем букв и цифр. в тексте)        
 str = input()
 d = 0
 l = 0
@@ -26,7 +27,7 @@ print("Количество цифр:",d)
 print("Количество букв:",l)
 
 
-
+3. Что забыл купить? (Программа должна вывести название продуктов, которые Петя должен был купить, но не купил.)
 shopping_done = input () 
 e = ",", "." 
 for i in range (len (e)): 
@@ -37,7 +38,7 @@ for j in shopping_list:
     if j not in shopping_done: 
         print (j) 
         
-        
+4. Школьные парты         
 str_list = input().split()
 for i in range(len(str_list)):
     x = int(str_list[i])
@@ -47,14 +48,14 @@ for i in range(len(str_list)):
         ans = (x//2)+1
     print ("Для", str_list[i], "учеников нужно", ans, "парт." )
     
-    
+5. Конфеты для Васи (сколько коробок каждого вида надо купить Васе)    
 import math
 str_list = input().split()
 for i in range(len(str_list)):
     x = float(str_list[i])
     print (math.ceil(x))
     
-    
+6. Таблица умножения (Распечатайте таблицу умножения от 1 до N для введенного числа M.)    
 m = int(input())
 n = int(input())
 s_list = list(range(n))
@@ -63,7 +64,7 @@ s_list.remove(0)
 for i in s_list:
     print(m*i)
     
-    
+7. Место спортсменов ("{место} место занял {имя}" /  "{место} никто не занял")    
 str_list = input().split()
 str2_list = input().split()
 for i in range(len(str2_list)):
@@ -72,13 +73,15 @@ for i in range(len(str2_list)):
     else: 
       print (str2_list[i], "место занял", str_list[int(str2_list[i])-1])
       
-      
+8. Любимая еда (Набор строк вида '{имя} любит {блюдо})      
 str1_list = input().split()
 str2_list = input().split()
 for i in range(len(str1_list)):
     print(str1_list[i],"любит",str2_list[i])
     
-    
+9. Данные пользователей (Если это мобильный телефон (состоит из цифр), поставить перед ним + 
+Если это логин почты (состоит из букв), добавить в конец @gmail.com
+В ином случае не делать ничего)    
 str_list = input().split()
 for i in range(len(str_list)):
     if str_list[i].isdigit():
@@ -90,7 +93,7 @@ for i in range(len(str_list)):
 print (*str_list)
 
 
-
+10. Простые числа ()
 str_list = input().split()
 for i in range(len(str_list)):
   ans_list = list(range(int(str_list[i])))
