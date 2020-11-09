@@ -1,0 +1,108 @@
+s1_list = input().split()
+s2_list = input().split()
+N = int(input())
+x1 = len(s1_list)
+x2 = len(s2_list)
+x = x1+x2
+if N>x:
+    print("Такого слова нет")
+else:
+    if N>x1:
+        p=N-x1
+        print(s2_list[p-1])
+    else:
+        print(s1_list[N-1])
+        
+        
+str = input()
+d = 0
+l = 0
+for i in range(len(str)):
+    if str[i].isdigit():
+        d=d+1
+    else:
+        l=l+1
+print("Количество цифр:",d)
+print("Количество букв:",l)
+
+
+
+shopping_done = input () 
+e = ",", "." 
+for i in range (len (e)): 
+    shopping_done = shopping_done.replace (e[i], "") 
+shopping_list = input ().split (" ") 
+shopping_done = shopping_done.split (" ") 
+for j in shopping_list: 
+    if j not in shopping_done: 
+        print (j) 
+        
+        
+str_list = input().split()
+for i in range(len(str_list)):
+    x = int(str_list[i])
+    if (x%2)==0:
+        ans = x//2
+    else:
+        ans = (x//2)+1
+    print ("Для", str_list[i], "учеников нужно", ans, "парт." )
+    
+    
+import math
+str_list = input().split()
+for i in range(len(str_list)):
+    x = float(str_list[i])
+    print (math.ceil(x))
+    
+    
+m = int(input())
+n = int(input())
+s_list = list(range(n))
+s_list.append(n)
+s_list.remove(0)
+for i in s_list:
+    print(m*i)
+    
+    
+str_list = input().split()
+str2_list = input().split()
+for i in range(len(str2_list)):
+    if (int(str2_list[i]))>(len(str_list)):
+      print(str2_list[i],"место никто не занял")
+    else: 
+      print (str2_list[i], "место занял", str_list[int(str2_list[i])-1])
+      
+      
+str1_list = input().split()
+str2_list = input().split()
+for i in range(len(str1_list)):
+    print(str1_list[i],"любит",str2_list[i])
+    
+    
+str_list = input().split()
+for i in range(len(str_list)):
+    if str_list[i].isdigit():
+        str = '+' + str_list[i]
+        str_list[i]=str
+    if str_list[i].isalpha():
+        str = str_list[i] + "@gmail.com"
+        str_list[i]=str
+print (*str_list)
+
+
+
+str_list = input().split()
+for i in range(len(str_list)):
+  ans_list = list(range(int(str_list[i])))
+  ans_list.remove(0)
+  ans_list.remove(1)
+  x = 0
+  for j in ans_list:
+    if ((int(str_list[i]))%j)==0:
+      x=1
+  if x==0:
+    print(str_list[i])
+      
+      
+      
+      
