@@ -1,0 +1,55 @@
+N=input()
+print("С новым",N,"годом!")
+
+B=int(input())
+O=int(input())
+Ans=O//B
+print(Ans)
+
+B=int(input())
+O=int(input())
+print(O%B)
+
+N=int(input())
+print(2**N)
+
+N=int(input())
+Ans=N**2
+Ans=str(Ans)
+print(Ans*100)
+
+N=int(input())
+H=N//60
+H=H%24
+M=N%60
+print(H,M)
+
+A=int(input())
+B=int(input())
+N=int(input())
+C=B+A*100
+Ans=N*C
+A2=Ans//100
+B2=Ans%100
+print("Количество пирожков:",N)
+print("Цена:", A2, "рублей", B2, "копеек")
+
+s = input()
+N = int(input())
+print(s[N-1])
+print(s[-N])
+
+A=input()
+B=input()
+x=int(A[0])+int(A[1])+int(A[2])
+y=int(B[0])+int(B[1])+int(B[2])
+print(x,y)
+
+N1=input()
+N2=input()
+N=N1+'-'+N2
+print(N)
+
+
+
+
