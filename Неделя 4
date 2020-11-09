@@ -1,0 +1,169 @@
+n = int(input())
+z = ""
+while n > 0:
+    z+=input()
+    n-=1
+print(z.count('@'))
+
+
+m = int(input())
+n = m
+s = ""
+while n > 0:
+    s+=input()
+    n-=1
+l = len(s)
+integ = []
+i = 0
+while i < l:
+    s_int = ''
+    a = s[i]
+    while '0' <= a <= '9':
+        s_int += a
+        i += 1
+        if i < l:
+            a = s[i]
+        else:
+            break
+    i += 1
+    if s_int != '':
+        integ.append(int(s_int))
+print(sum(integ)/m)
+
+
+
+s = input()
+s = s.lower()
+if s.find("зачесть") != -1:
+    print("YES")
+else:
+    print("NO")
+    
+    
+n = int(input())
+while n > 0:
+    a = input().split()
+    surname = a[0]
+    a.pop(0)
+    summa = 0
+    for i in a:
+        summa +=float(i)
+    print(surname, round(summa,1))
+    n = n - 1
+    
+    
+f = input().split(', ')
+s = input().split(', ')
+t = input().split(', ')
+forth = input().split(', ')
+fifth = input().split(', ')
+person = input()
+score = 0
+for i in f:
+    if i == person:
+        if f.index(i) == 0:
+            score += 5
+        elif f.index(i) < 3:
+            score += 3
+        else:
+            score += 1
+for i in s:
+    if i == person:
+        if s.index(i) == 0:
+            score += 5
+        elif s.index(i) < 3:
+            score += 3
+        else:
+            score += 1
+for i in t:
+    if i == person:
+        if t.index(i) == 0:
+            score += 5
+        elif t.index(i) < 3:
+            score += 3
+        else:
+            score += 1
+for i in forth:
+    if i == person:
+        if forth.index(i) == 0:
+            score += 5
+        elif forth.index(i) < 3:
+            score += 3
+        else:
+            score += 1
+for i in fifth:
+    if i == person:
+        if fifth.index(i) == 0:
+            score += 5
+        elif fifth.index(i) <3:
+            score += 3
+        else:
+            score += 1
+print(score)
+
+
+people = input().split()
+score = input().split()
+n = len(people)
+passed = ""
+failed = ""
+for i in range (n):
+    if int(score[i]) >= 4:
+        passed += people [i]
+        if i != n - 1:
+            passed+= ' '
+    else:
+        failed += people [i]
+        if i != n -1:
+            failed+= ' '
+print(failed)
+print(passed)
+
+
+a = input()
+u = 0
+l = 0
+for i in a:
+    if i.isupper():
+        u += 1
+    else:
+        l += 1
+if l > u:
+    print(a.lower())
+else:
+    print(a.upper()) 
+    
+    
+import re
+a = input().split()
+n = 0
+z = ""
+for i in a:
+    n = i.find(next(filter(str.isalpha, i)))
+    if i == a[-1]:
+        z += i[n:i.index('@')] + "@pamparam.ru"
+    else:
+        z += i[n:i.index('@')] +  "@pamparam.ru; "
+print(z)
+       
+       
+s = input()
+a = s[:s.find('h') + 1]
+b = s[s.find('h') +1:s.rfind('h')]
+c = s[s.rfind('h'):]
+s = a + b.replace('h', 'H') + c
+print(s)
+
+
+
+a = input().split(', ')
+answer = input()
+test = ""
+for i in a:
+    test += i[-1]
+if test == answer:
+    print("Ваш ответ:", answer)
+    print("Молодец! Все верно")
+else:
+    print("Ваш ответ:", test)
+    print("Тест решен неверно, правильный ответ:", answer)
